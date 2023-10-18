@@ -1,3 +1,5 @@
+import { PUBLIC_BEARING } from "$env/static/public";
+
 export async function load(loadEvent) {
   const { fetch, params } = loadEvent;
 
@@ -6,7 +8,7 @@ export async function load(loadEvent) {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${import.meta.env.VITE_BEARING}`,
+      Authorization: `Bearer ${PUBLIC_BEARING}`,
     },
   };
   try {
